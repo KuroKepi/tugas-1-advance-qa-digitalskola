@@ -47,9 +47,6 @@ public class TaskTwoTest {
                 .then()
                 .extract().response();
 
-        System.out.println("Login Status: " + response.statusCode());
-        System.out.println("Login Body: " + response.asString());
-
         response.then()
                 .statusCode(200)
                 .body("authToken", notNullValue());
